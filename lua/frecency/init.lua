@@ -84,7 +84,7 @@ function Frecency:validate_database(force)
   end
   local function remove_entries()
     self.database:remove_files(unlinked)
-    self:notify("removed %d missing entries.", #unlinked)
+    -- self:notify("removed %d missing entries.", #unlinked)
   end
   if not config.db_safe_mode then
     remove_entries()
